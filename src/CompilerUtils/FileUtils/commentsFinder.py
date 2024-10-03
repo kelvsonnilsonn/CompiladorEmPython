@@ -8,7 +8,8 @@ def commentsFinder(stringLine, line):
         for index, char in enumerate(stringLine.strip()):
             if index < len(stringLine) - 1:
                 if char == stringLine[index+1] and char == '/':
-                    checkState(literalSemComentario, line)
+                    newInstance = checkState(literalSemComentario, line)
+                    newInstance.running()
                     return 1
                 
                 else:
